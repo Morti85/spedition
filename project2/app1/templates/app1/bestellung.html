@@ -1,0 +1,29 @@
+{% extends 'app1/base.html' %}
+
+{% block titel%}Bestellung{% endblock titel %}
+{% block content %}
+
+<div class="col">
+    <h1>Bitte Bestellung angeben</h1>
+    <br />
+    <form>
+        <div class="mb-3">
+            <label for="kunde" class="form-label">Kunde</label>
+            <select class="form-select" id="kunde" aria-describedby="kundenHelp" name="kunde">
+                {% for zeile in kunden %}
+                <option value="0">{{zeile}}</option>
+                {% endfor %}
+            </select>
+            <div id="kundenHelp" class="form-text">Bitte einen Kunden auswählen</div> 
+        </div>
+        <div class="mb-3">
+            <label for="bestellung" class="form-label">Bestellung</label>
+            <input type="text" class="form-control" id="bestellung" aria-describedby="bestellungHelp" name="bestellung">
+            <div id="bestellungHelp" class="form-text">Bitte Ihre Bestellung aufgeben</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+        <button type="submit" class="btn btn-danger">Abbrechen</button>
+        <button type="submit" class="btn btn-success">Neu</button>
+    </form>
+</div>
+{% endblock content %}

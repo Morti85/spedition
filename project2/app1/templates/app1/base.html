@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 
-    <title>Spedition 666 (XYZ)</title>
+    <title>{% block titel %}
+     Spedition 666 (XYZ){% endblock titel %}</title>
   </head>
   <body>
   <div class="gross">
-  <img class="bord" src="https://www.just-kiss.com/images/product_images/info_images/FTVL-0139-400X280-SCENE-X-1000X1000X96-RGB.jpg">
     <div class = "container">
         <div class = "row">
+          {% block content %}
+        
             <div class = "col-12">
                 <h1>Verwaltungsportal</h1>
                     <br />
@@ -38,6 +40,7 @@
                     <a href="#"><li>Auswertung</li></a>
                 </ol>
             </div>
+          {% endblock content %}
         </div>
     </div>
   </div>
