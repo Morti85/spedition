@@ -11,7 +11,7 @@
             <label for="kunde" class="form-label">Kunde</label>
             <select class="form-select" id="kunde" aria-describedby="kundenHelp" name="kunde">
                 {% for zeile in kunden %}
-                <option value="0">{{zeile}}</option>
+                <option value="zeile.id">{{zeile.name}}</option>
                 {% endfor %}
             </select>
             <div id="kundenHelp" class="form-text">Bitte einen Kunden auswählen</div> 
